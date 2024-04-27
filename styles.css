@@ -1,0 +1,76 @@
+body {
+    background-color: #000;
+}
+
+.solarsystem {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin: 100px auto;
+    perspective: 800px;
+}
+
+.suraj {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px;
+    animation: spin 10s linear infinite;
+}
+
+.earth, .mars,.jupiter,.vanus {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #6cf;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px;
+    transform-origin: 50% -100px;
+    animation: orbit 10s linear infinite;
+}
+
+.orbit1 {
+    animation-duration: 15s;
+}
+
+.orbit2 {
+    animation-duration: 17s;
+}
+
+.orbit3 {
+    animation-duration: 19s;
+}
+
+.orbit4 {
+    animation-duration: 21s;
+}
+
+@keyframes orbit {
+    from {
+        transform: rotateZ(0deg) translateX(30px) rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg) translateX(30px) rotateZ(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+footer{
+    color: white;
+    position: fixed;
+    padding-left: 46%;
+}
